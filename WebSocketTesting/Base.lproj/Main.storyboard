@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebSocketTesting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEi-K1-hoQ">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mj-sz-1G2">
+                                        <rect key="frame" x="363" y="7" width="36" height="30"/>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="action_sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MoQ-Oq-58M"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a8h-JT-msp">
+                                        <rect key="frame" x="8" y="0.0" width="351" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="a8h-JT-msp" secondAttribute="bottom" id="IDu-N8-pym"/>
+                                    <constraint firstItem="6Mj-sz-1G2" firstAttribute="leading" secondItem="a8h-JT-msp" secondAttribute="trailing" constant="4" id="YbK-Kw-MqQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Mj-sz-1G2" secondAttribute="trailing" constant="15" id="aah-yJ-APM"/>
+                                    <constraint firstItem="a8h-JT-msp" firstAttribute="top" secondItem="eEi-K1-hoQ" secondAttribute="top" id="h3a-P9-bcM"/>
+                                    <constraint firstItem="6Mj-sz-1G2" firstAttribute="centerY" secondItem="eEi-K1-hoQ" secondAttribute="centerY" id="hkT-cG-toK"/>
+                                    <constraint firstItem="a8h-JT-msp" firstAttribute="leading" secondItem="eEi-K1-hoQ" secondAttribute="leading" constant="8" id="tB6-mh-fVx"/>
+                                    <constraint firstAttribute="height" constant="44" id="tOx-U1-KIR"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ih9-jS-yjx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PnY-cd-kku">
+                                    <size key="itemSize" width="414" height="86"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="messageIdentifer" id="NuR-fG-JPD" customClass="MessageCell" customModule="WebSocketTesting" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Wa9-lg-NQU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJw-5o-WlC">
+                                                    <rect key="frame" x="8" y="8" width="398" height="70"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="SJw-5o-WlC" secondAttribute="trailing" constant="8" id="HfN-Yh-8sb"/>
+                                                <constraint firstItem="SJw-5o-WlC" firstAttribute="top" secondItem="Wa9-lg-NQU" secondAttribute="top" constant="8" id="Vhd-MY-qeP"/>
+                                                <constraint firstAttribute="bottom" secondItem="SJw-5o-WlC" secondAttribute="bottom" constant="8" id="Ydb-cI-QZa"/>
+                                                <constraint firstItem="SJw-5o-WlC" firstAttribute="leading" secondItem="Wa9-lg-NQU" secondAttribute="leading" constant="8" id="y1z-jr-lNs"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="86"/>
+                                        <connections>
+                                            <outlet property="bodyLabel" destination="SJw-5o-WlC" id="6zk-c1-L93"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ih9-jS-yjx" secondAttribute="trailing" id="FGv-gA-T42"/>
+                            <constraint firstItem="eEi-K1-hoQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H1k-30-vUo"/>
+                            <constraint firstItem="ih9-jS-yjx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MZ0-t6-OXK"/>
+                            <constraint firstItem="eEi-K1-hoQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Qw8-Tn-WZg"/>
+                            <constraint firstItem="eEi-K1-hoQ" firstAttribute="top" secondItem="ih9-jS-yjx" secondAttribute="bottom" constant="8" symbolic="YES" id="ahJ-aR-4KQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eEi-K1-hoQ" secondAttribute="trailing" id="jLB-KI-hkA"/>
+                            <constraint firstItem="ih9-jS-yjx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nRQ-L2-HaZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ih9-jS-yjx" id="Vh0-DZ-3Zv"/>
+                        <outlet property="sendButton" destination="6Mj-sz-1G2" id="O85-3v-a7O"/>
+                        <outlet property="textField" destination="a8h-JT-msp" id="xIo-Do-nJK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49.275362318840585" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
