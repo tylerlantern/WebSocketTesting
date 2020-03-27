@@ -1,0 +1,13 @@
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/bin/Debug/netcoreapp2.2/EchoApp.deps.json
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/bin/Debug/netcoreapp2.2/EchoApp.runtimeconfig.json
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/bin/Debug/netcoreapp2.2/EchoApp.runtimeconfig.dev.json
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/bin/Debug/netcoreapp2.2/EchoApp.dll
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/bin/Debug/netcoreapp2.2/EchoApp.pdb
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/obj/Debug/netcoreapp2.2/EchoApp.csprojAssemblyReference.cache
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/obj/Debug/netcoreapp2.2/EchoApp.RazorAssemblyInfo.cache
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/obj/Debug/netcoreapp2.2/EchoApp.RazorAssemblyInfo.cs
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/obj/Debug/netcoreapp2.2/EchoApp.AssemblyInfoInputs.cache
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/obj/Debug/netcoreapp2.2/EchoApp.AssemblyInfo.cs
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/obj/Debug/netcoreapp2.2/EchoApp.RazorTargetAssemblyInfo.cache
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/obj/Debug/netcoreapp2.2/EchoApp.dll
+/Users/nattapongunaregul/Desktop/WebSocketDotnetCore/WebSocketsSample/obj/Debug/netcoreapp2.2/EchoApp.pdb
