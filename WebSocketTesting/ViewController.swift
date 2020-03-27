@@ -30,12 +30,10 @@ class ViewController: UIViewController {
     manager = SocketManager(
       socketURL: URL(string: "https://13aff160.ngrok.io")!,
       config: [
-        .log(true),
-        .forceWebsockets(true)
+        .log(true)
       ]
     
     )
-    
      manager.defaultSocket.on(clientEvent: .connect) {data, ack in
         print("On Connect")
     }
@@ -47,8 +45,6 @@ class ViewController: UIViewController {
      manager.defaultSocket.onAny { (event) in
       print("onAny event:",event.event," items:",event.items)
     }
-    
-    
     manager.defaultSocket.connect()
   }
   
