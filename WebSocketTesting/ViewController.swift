@@ -16,30 +16,19 @@ class ViewController: UIViewController {
   var manager : SocketManager!
   
   @IBAction func action_sendMessage(_ sender: Any) {
-//    socket.emit("server", with: [textField.text ?? ""])
+    manager.defaultSocket.emit("server", with: [textField.text ?? ""])
   }
-//  ws://echo.websocket.org
-//  wss://echo.websocket.org
-//  let manager = SocketManager(
-//    socketURL: URL(string: "ws://echo.websocket.org")!,
-//    config: [
-//      .log(true),
-//      .forceWebsockets(true),
-//    ]
-//
-//  )
-//  var socket : SocketIO.SocketIOClient  { return manager.defaultSocket }
+
   override func viewDidLoad() {
     super.viewDidLoad()
     integrateSocket()
-//    manager.defaultSocket.connect()
-    // Do any additional setup after loading the view.
+
   }
 
   func integrateSocket(){
     
     manager = SocketManager(
-      socketURL: URL(string: "wss://echo.websocket.org")!,
+      socketURL: URL(string: "https://13aff160.ngrok.io")!,
       config: [
         .log(true),
         .forceWebsockets(true)
