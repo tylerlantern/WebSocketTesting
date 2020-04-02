@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE49F4522435C443006887EE /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F4512435C443006887EE /* BubbleView.swift */; };
+		BE49F4542435CAAD006887EE /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE49F4532435CAAD006887EE /* File.swift */; };
 		BE5C818B242CCACB0083C5EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C818A242CCACB0083C5EB /* AppDelegate.swift */; };
 		BE5C818D242CCACB0083C5EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C818C242CCACB0083C5EB /* SceneDelegate.swift */; };
 		BE5C818F242CCACB0083C5EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C818E242CCACB0083C5EB /* ViewController.swift */; };
@@ -55,6 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE49F4512435C443006887EE /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
+		BE49F4532435CAAD006887EE /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		BE5C8187242CCACB0083C5EB /* WebSocketTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSocketTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5C818A242CCACB0083C5EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE5C818C242CCACB0083C5EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				BE5C8195242CCACD0083C5EB /* LaunchScreen.storyboard */,
 				BE5C8198242CCACD0083C5EB /* Info.plist */,
 				BECE5FAE242CD41D000955AC /* MessageCell.swift */,
+				BE49F4512435C443006887EE /* BubbleView.swift */,
+				BE49F4532435CAAD006887EE /* File.swift */,
 			);
 			path = WebSocketTesting;
 			sourceTree = "<group>";
@@ -296,6 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE49F4522435C443006887EE /* BubbleView.swift in Sources */,
+				BE49F4542435CAAD006887EE /* File.swift in Sources */,
 				BE5C818F242CCACB0083C5EB /* ViewController.swift in Sources */,
 				BECE5FAF242CD41D000955AC /* MessageCell.swift in Sources */,
 				BE5C818B242CCACB0083C5EB /* AppDelegate.swift in Sources */,

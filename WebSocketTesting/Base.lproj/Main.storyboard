@@ -26,7 +26,7 @@
                                             <action selector="action_sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MoQ-Oq-58M"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a8h-JT-msp">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a8h-JT-msp" customClass="InputTextField" customModule="WebSocketTesting" customModuleProvider="target">
                                         <rect key="frame" x="8" y="0.0" width="351" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -46,8 +46,8 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ih9-jS-yjx">
                                 <rect key="frame" x="0.0" y="44" width="414" height="766"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PnY-cd-kku">
-                                    <size key="itemSize" width="414" height="86"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YnB-sc-OnU">
+                                    <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -60,23 +60,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJw-5o-WlC">
-                                                    <rect key="frame" x="8" y="8" width="398" height="70"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWO-WR-7bu" customClass="BubbleView" customModule="WebSocketTesting" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="82" height="86"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJw-5o-WlC">
+                                                            <rect key="frame" x="20" y="20" width="42" height="46"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="SJw-5o-WlC" secondAttribute="trailing" constant="20" id="Net-cD-qeq"/>
+                                                        <constraint firstItem="SJw-5o-WlC" firstAttribute="top" secondItem="rWO-WR-7bu" secondAttribute="top" constant="20" id="TaV-g3-O2C"/>
+                                                        <constraint firstAttribute="bottom" secondItem="SJw-5o-WlC" secondAttribute="bottom" constant="20" id="UPI-dG-AI2"/>
+                                                        <constraint firstItem="SJw-5o-WlC" firstAttribute="leading" secondItem="rWO-WR-7bu" secondAttribute="leading" constant="20" id="bC3-fV-jTg"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="SJw-5o-WlC" secondAttribute="trailing" constant="8" id="HfN-Yh-8sb"/>
-                                                <constraint firstItem="SJw-5o-WlC" firstAttribute="top" secondItem="Wa9-lg-NQU" secondAttribute="top" constant="8" id="Vhd-MY-qeP"/>
-                                                <constraint firstAttribute="bottom" secondItem="SJw-5o-WlC" secondAttribute="bottom" constant="8" id="Ydb-cI-QZa"/>
-                                                <constraint firstItem="SJw-5o-WlC" firstAttribute="leading" secondItem="Wa9-lg-NQU" secondAttribute="leading" constant="8" id="y1z-jr-lNs"/>
+                                                <constraint firstItem="rWO-WR-7bu" firstAttribute="top" secondItem="Wa9-lg-NQU" secondAttribute="top" id="Anq-0G-BeD"/>
+                                                <constraint firstItem="rWO-WR-7bu" firstAttribute="leading" secondItem="Wa9-lg-NQU" secondAttribute="leading" id="Jij-ff-jJ8"/>
+                                                <constraint firstAttribute="bottom" secondItem="rWO-WR-7bu" secondAttribute="bottom" id="KL2-tm-Tb2"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="86"/>
                                         <connections>
                                             <outlet property="bodyLabel" destination="SJw-5o-WlC" id="6zk-c1-L93"/>
+                                            <outlet property="bubbleView" destination="rWO-WR-7bu" id="8le-tQ-9hA"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -97,7 +110,7 @@
                     <connections>
                         <outlet property="collectionView" destination="ih9-jS-yjx" id="Vh0-DZ-3Zv"/>
                         <outlet property="sendButton" destination="6Mj-sz-1G2" id="O85-3v-a7O"/>
-                        <outlet property="textField" destination="a8h-JT-msp" id="xIo-Do-nJK"/>
+                        <outlet property="textField" destination="a8h-JT-msp" id="bq7-jW-EgS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -10,6 +10,7 @@ import UIKit
 
 class MessageCell: UICollectionViewCell {
     
+  @IBOutlet weak var bubbleView: BubbleView!
   @IBOutlet weak var bodyLabel: UILabel!
   
 }
